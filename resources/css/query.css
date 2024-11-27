@@ -1,0 +1,125 @@
+@media screen and (max-width : 1200px){
+    .row{
+        width: 100%;
+        margin: auto;
+        padding: 0 25px;
+    }
+    .hero-text-box {
+        width: 90%;
+    }
+    .hero-text-box .btn-hero{
+        margin-top: 100px;
+    }
+    #team .section-title p{
+        width: 70%;
+        margin: auto;
+    }
+}
+@media screen and (max-width : 1024px){
+    .menu-bar .menu-icon a{
+        display: block;
+    }
+    .nav-bar{
+        display: none;
+    }
+    #hero .uk-sticky-fixed{
+        padding-bottom: 25px;
+    }
+    #hero .uk-sticky-fixed .menu-bar .menu-icon a{
+       position: absolute;
+       top: 35px;
+       right: 30px;
+    }
+    #hero .logo img{
+        margin-top: 0px;
+    }
+    #hero .uk-sticky-fixed .logo img{
+        margin-top: 25px;
+    }
+    .grid-service-container,
+    .grid-team-container,
+    .grid-skill-container{
+        grid-template-columns: repeat(2, 1fr);
+        row-gap: 45px;
+    }
+    .grid-service-container h3,
+    .grid-team-container h3,
+    .grid-skill-container h3{
+        margin: 10px 0;
+    }
+    .grid-contact-container{
+        padding: 0;
+    }
+    .testimonial-pic img{
+        float: none;
+        height: 200px;
+        width: 200px;
+    }
+    .testimonial-pic{
+        width: 100%;
+        margin: auto;
+        text-align: center;
+    }
+    .testimonial-description{
+        float: none;
+        width: 100%;
+        margin: auto;
+        text-align: center;
+        
+    }
+    .testimonial-description h5{
+        margin: 15px 0;
+    }
+    #service .section-title p,
+    #skill .section-title p,
+    #portfolio .section-title p,
+    #contact .section-title p,
+    #team .section-title p{
+        width: 90%;
+        margin: auto;
+    }
+
+}
+@media screen and (max-width : 768px){
+    .grid-service-container,
+    .grid-team-container,
+    .grid-skill-container,
+    .grid-portfolio-container,
+    .grid-testimonial-container{
+        grid-template-columns: repeat(1, 1fr);
+        row-gap: 45px;
+        margin-top: 45px;
+    }
+    .grid-portfolio-items .portfolio-pic{
+        width: 100%;
+    }
+    .filter-btn{
+        margin-top: 15px;
+    }
+    #service .section-title p,
+    #skill .section-title p,
+    #portfolio .section-title p,
+    #contact .section-title p,
+    #team .section-title p{
+        width: 100%;
+        margin: auto;
+    }
+    #footer ul{
+        padding-left: 0;
+    }
+}
+@media screen and (max-width : 480px){
+    html, body{
+        font-size: 8px;
+    }
+    .team-pic img{
+        width: 150px;
+        height: 150px;
+    }
+    .social-icon ul li:nth-child(1) a{
+        padding: 5px 12px;
+    }
+    .social-icon ul li a{
+        padding: 4.5px 10px;
+    }
+}

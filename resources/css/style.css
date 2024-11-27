@@ -1,0 +1,585 @@
+/*======================================================
+1.TEMPLATE NAME:  CUDA PORTFOLIO TEMPLATE
+2.TEMPLATE URI:
+3.DESCRIPTION: 
+4.AUTHOR: RIMY
+5.AUTHOR URI: 
+6.SUPPORT: RIMY
+7.VERSION: 1.0
+==================================================*/
+/*=====================================================
+    CSS INDEX
+    ==========
+    1.COMMON CSS
+    2.HERO
+====================================================*/
+/*====================================================
+    1.COMMON CSS
+======================================================*/
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html, body{
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #fff;
+    text-rendering: optimizeLegibility;
+    scroll-behavior: smooth;
+}
+.row{
+    width: 1180px;
+    margin: auto;
+}
+section{
+    padding: 100px 0;
+}
+a{
+    text-decoration: none;
+}
+ul li{
+    list-style-type: none;
+}
+h1, h2, h3, h4, h5{
+    font-family: 'Titillium Web', sans-serif;
+}
+h1{
+    font-size: 400%;
+    font-weight: 700;
+}
+h2{
+    font-size: 350%;
+    font-weight: 600;
+}
+h3{
+    font-size: 240%;
+    font-weight: 600;
+}
+p{
+    font-size: 160%;
+}
+h4{
+    font-size: 180%;
+}
+h5{
+    font-size: 210%;
+}
+.btn{
+    background: #eb7d4b;
+    width: 200px;
+    border-radius: 2px;
+    padding: 15px 45px;
+    font-size: 180%;
+    color: #fff;
+    border-bottom: 5px solid #c86a40;
+    border-color: #c86a40;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+.btn:hover{
+    text-decoration: none;
+    color: #fff;
+}
+.section-title{
+    color: #3c4761;
+    width: 60%;
+    margin: auto;
+    text-align: center;
+}
+.section-title h2{
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+.section-title h2::after{
+    content: '';
+    width: 100px;
+    height: 4px;
+    background: #14a58c;
+    display: block;
+    text-align: center;
+    margin: 15px auto;
+}
+.section-title p{
+    font-size: 180%;
+    margin: 15px 0;
+}
+/*Hamburger Menu*/
+    .menu-bar .menu-icon a{
+        font-size: 400%;
+        color: #fff;
+        position: absolute;
+        top: 35px;
+        right: 50px;
+        z-index: 9999;
+        display: none;
+    }
+   .menu-bar .overlay-menu{
+    width: 100%;
+    height: 0;
+    position: fixed;
+    top: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.95);
+    z-index: 9999;
+    overflow: hidden;
+    
+   }
+   .menu-bar .overlay-menu .close-btn a{
+    font-size: 400%;
+    color: #fff;
+    position: absolute;
+    top: 35px;
+    right: 50px;
+   }
+.menu-bar .overlay-menu .overlay-items{
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.menu-bar .overlay-menu .overlay-items a{
+    display: block;
+    color: #fff;
+    font-size: 300%;
+    text-transform: uppercase;
+    text-decoration: none;
+    text-align: center;
+    padding: 5px 0;
+    cursor: pointer;
+    font-weight: 500;
+    transition: .5s;
+}
+.menu-bar .overlay-menu .overlay-items a:hover{
+    color: #ffdd99;
+    font-size: 320%;
+}
+
+/*====================================================
+    2.HERO
+======================================================*/
+#hero{
+    background: linear-gradient(rgba(135, 80, 156, 0.8), rgba(135, 80, 156, 0.8)), url(img/hero.jpg) no-repeat center / cover;
+    width: 100%;
+    height: 90vh;
+}
+.logo{
+    float: left;
+    margin-top: 30px;
+}
+.nav-bar{
+    float: right;
+    margin-top: 20px;
+}
+.nav-bar li {
+    margin-top: 30px;
+    display: inline-block;
+    transition: .5s;  
+}
+.nav-bar li a{
+    font-size: 180%;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 600;
+    padding: 7px 15px;
+    margin-left: 5px;
+}
+.nav-bar li a:hover{
+    text-decoration: none;
+}
+.active{
+    background: #643a79;
+    padding: 7px 15px;
+    border-radius: 3px;
+}
+.nav-bar li a:hover{
+    background: #643a79;
+    padding: 7px 15px;
+    border-radius: 3px;
+}
+#hero .uk-sticky-fixed{
+    background: rgba(118, 76, 138, 0.95);
+}
+#hero .uk-sticky-fixed .nav-bar li{
+  margin: 10px 0;
+}
+#hero .uk-sticky-fixed .logo{
+    margin-top: 20px;
+}
+.hero-text-box{
+    width: 70%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+.hero-text-box h1{
+    margin-bottom: 60px;
+    color: #f7f3ea;
+}
+/*Hamburger Menu*/
+
+/*====================================================
+    3.SERVICE
+======================================================*/
+#service{
+    background: linear-gradient(rgba(23, 194, 163, 0.9), rgba(23, 194, 163, 0.9)), url(img/service.jpg) no-repeat center / cover;
+}
+#service .section-title h2{
+    color: #fff;
+}
+#service .section-title p{
+    color: #fff;
+    width: 70%;
+    margin: auto;
+}
+#service .section-title h2::after{
+    background: #14a58c;
+}
+.grid-service-container{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 50px;
+}
+.service-icon{
+    text-align: center;
+   margin-top: 45px;
+   margin-bottom: 30px;
+}
+.service-icon img{
+    height: 100px;
+}
+.service-description{
+    text-align: center;
+}
+.service-description h3{
+    text-transform: uppercase;
+    color: #fff;
+}
+.service-description p{
+    font-weight: 300;
+    width: 80%;
+    margin: auto;
+    margin-top: 15px;
+}
+/*====================================================
+    4.TEAM
+======================================================*/
+#team{
+    background:linear-gradient(rgba(231, 241, 248, 0.8), rgba(231, 241, 248, 0.8)), url(img/team.jpg) no-repeat center / cover;
+    color: #3c4761;
+}
+#team .section-title h2{
+    color: #3c4761;
+}
+#team .section-title h2::after{
+    background-color: rgba(60, 71, 97, 0.3);
+}
+.grid-team-container{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 40px;
+}
+.team-pic{
+    text-align: center;
+    margin-top: 50px;
+}
+.team-pic img{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+}
+.team-description{
+    text-align: center;
+}
+.team-description h3{
+    margin-top: 45px;
+    text-transform: uppercase;
+    color: #3c4761;
+}
+.team-description span{
+    font-size: 160%;
+    font-weight: 500;
+    display: block;
+    color: #30bae7;
+}
+.team-description p{
+    font-weight: 300;
+    margin: 15px 0;
+}
+.social-icon{
+   text-align: center;
+   margin-top: 30px;
+}
+.social-icon ul li{
+    display: inline-block;
+}
+.social-icon ul li a{
+    font-size: 200%;
+    color: #fff;
+    background: #bdd1df;
+    padding: 3px 10px;
+    margin: 0 5px;
+    border-radius: 50%;
+    transition: .5s;
+    line-height: 2.0;
+}
+.social-icon ul li:nth-child(1) a{
+    padding: 3px 13px;
+}
+.social-icon ul li a:hover{
+    color: #3c4761;
+    background-color: rgba(48, 185, 231, 0.3);
+}
+/*====================================================
+    5.SKILL
+======================================================*/
+#skill{
+    background: linear-gradient(rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0.85)), url(img/skill-1.jpg) no-repeat center / cover;
+}
+#skill .section-title{
+    margin-bottom: 50px;
+}
+#skill .section-title h2{
+    color: #3c4761;
+}
+#skill .section-title h2::after{
+    background: #dfe8ed;
+}
+#skill .section-title p{
+    width: 60%;
+    margin: auto;
+}
+.grid-skill-container{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    padding: 0 45px;
+}
+.grid-skill-items{
+    text-align: center;
+}
+#skill .grid-skill-items h3{
+    color: #3c4761;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+svg.radial-progress circle{
+    stroke-width: 6px;
+}
+svg.radial-progress text{
+    fill: #3c4761;
+    font-size: 200%;
+}
+svg.web-design circle{
+    stroke: #30bae7;
+}
+svg.html-css circle{
+    stroke: #d74680;
+}
+svg.graphic-design circle{
+    stroke: #15c7a8;
+}
+svg.ui-ux circle{
+    stroke: #eb7d4b;
+}
+/*====================================================
+    6.PORTFOLIO
+======================================================*/
+#portfolio{
+    background: #ffdd99;
+}
+#portfolio .row{
+    margin-bottom: 45px;
+}
+#portfolio .section-title h2::after{
+    background: #e5c37f;
+}
+#portfolio .section-title{
+    margin-bottom: 60px;
+}
+#portfolio .section-title p{
+    width: 60%;
+    margin: auto;
+}
+.grid-portfolio-container{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 0 30px;
+    grid-gap: 15px;
+}
+#portfolio h4{
+    color: #393939;
+    text-align: center;
+   margin-top: 15px;
+   margin-bottom: 40px;
+}
+.portfolio-pic{
+    height: 80%;
+}
+.portfolio-filter{
+    text-align: center;
+}
+.filter-btn{
+    padding: 13px 45px;
+    font-size: 180%;
+    background: #ebc985;
+    border: 2px solid #ebc985;
+    text-transform: uppercase;
+    cursor: pointer;
+    margin: 0 5px;
+    border-radius: 5px;
+    color: #393939;
+}
+.portfolio-filter .mixitup-control-active{
+    background: #fff;
+    border: 2px solid #fff;
+}
+#portfolio .btn-portfolio{
+    text-align: center;
+    margin-top: 45px;
+}
+.btn-portfolio a{
+    background: #17c2a4;
+    border-color: #14a58c;
+}
+/*====================================================
+    7.TESTIMONIAL
+======================================================*/
+#testimonial{
+    background: linear-gradient(rgba(215, 70, 128, 0.95), rgba(215, 70, 128, 0.95)), url(img/testimonial.jpg) no-repeat center / cover;
+}
+#testimonial h2::after{
+background: #b73c6d;
+}
+#testimonial .section-title{
+    color: #fff;
+    margin-bottom: 60px;
+}
+#testimonial .section-title h2{
+    color: #fff;
+}
+.grid-testimonial-container{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 60px;
+}
+.grid-testimonial-items:nth-child(1){
+    margin-bottom: 65px;
+}
+.grid-testimonial-items:nth-child(2){
+    margin-bottom: 65px;
+}
+.testimonial-pic img{
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  float: left;
+}
+.testimonial-description{
+    float: right;
+    width: 75%;
+}
+.testimonial-description h5{
+    margin-bottom: 15px;
+    font-weight: 300;
+    font-style: italic;
+    color: #fff;
+}
+.testimonial-description h3{
+    text-transform: uppercase;
+    color: #fff;
+    margin-top: 25px;
+    margin-bottom: 0;
+}
+.testimonial-description h4{
+    color: #ffdd99;
+    font-weight: 400;
+    margin: 0;
+}
+/*====================================================
+    8.CONTACT
+======================================================*/
+#contact{
+    background: linear-gradient(rgba(60, 83, 153, 0.9), rgba(60, 83, 153, 0.9)), url(img/contact.jpg) no-repeat center / cover;
+}
+.section-title{
+    width: 100%;
+}
+#contact .section-title h2::after{
+    background: #273a71;
+}
+#contact .section-title h2{
+    color: #fff;
+}
+#contact .section-title p{
+    color: #fff;
+}
+.contact-form{
+    margin-top: 65px;
+}
+.grid-contact-container{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px;
+    padding: 0 200px;
+}
+.grid-contact-items:nth-child(3){
+    grid-column: 1 / 3;
+}
+.grid-contact-items .single-form input[type="text"],
+.grid-contact-items .single-form input[type="email"],
+.grid-contact-items .single-form textarea {
+    width: 100%;
+    padding: 20px 15px;
+    background: #273a71;
+    border: 2px solid #273a71;
+    border-radius: 3px;
+    font-size: 160%;
+    color: #fff;
+    font-weight: 500;
+    font-family: 'Titillium Web', sans-serif;
+}
+.single-form ::placeholder {
+    color: #fff;
+    opacity: 1;
+}
+.btn-contact{
+   text-align: center;
+   margin-top: 60px;
+}
+.btn-contact a{
+    background: #30bae7;
+    border-color: #299ec5;
+    
+}
+/*====================================================
+    9.FOOTER
+======================================================*/
+#footer{
+    background: #344b8e;
+    box-shadow: 0 2px 3px #fff;
+}
+.social-link{
+    text-align: center;
+}
+.social-link ul li{
+    display: inline-block;
+    margin: 35px 0;
+}
+.social-link ul li a{
+    font-size: 240%;
+    color: #fff;
+    text-transform: capitalize;
+    padding: 0 25px;
+    font-weight: 600;
+    transition: .5s;
+}
+.social-link ul li a:hover{
+    color: #30bae7;
+    text-decoration: none;
+}
